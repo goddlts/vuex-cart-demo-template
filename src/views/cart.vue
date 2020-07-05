@@ -52,7 +52,7 @@
         </template>
       </el-table-column>
       <el-table-column
-        prop="price"
+        prop="totalPrice"
         label="小计">
       </el-table-column>
       <el-table-column
