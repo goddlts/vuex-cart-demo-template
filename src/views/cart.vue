@@ -10,25 +10,16 @@
     >
       <el-table-column
         width="55">
-        <!--
-          element 表格组件自定义列头的时候，如果绑定了数据，则必须使用 template 进行包裹，而且必须设定 slot-scope="scope"
-          如果你没有绑定任何数据，则不用这么做
-          v-model="checkedAll"
-        -->
-        <!-- eslint-disable -->
-        <el-checkbox
-          slot="header"
-          slot-scope="scope"
-          size="mini"
-          >
-        </el-checkbox>
-        <!-- eslint-enable -->
+        <template v-slot:header>
+          <el-checkbox size="mini">
+          </el-checkbox>
+        </template>
         <!--
           @change="updateProductChecked"  默认参数：更新后的值
           @change="updateProductChecked(productId, $event)"  123, 原来那个默认参数
             当你传递了自定义参数的时候，还想得到原来那个默认参数，就手动传递一个 $event
          -->
-        <template slot-scope="scope">
+        <template v-slot="scope">
           <el-checkbox
             size="mini"
             :value="scope.row.isChecked"
