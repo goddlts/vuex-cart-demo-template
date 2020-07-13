@@ -30,7 +30,7 @@ export default {
   data () {
     return {
       cartProducts: [
-        { id: 1, title: 'iPad 4 Mini', price: 500.01, isChecked: false, count: 0 },
+        { id: 1, title: 'iPad Pro', price: 500.01, isChecked: false, count: 0 },
         { id: 2, title: 'H&M T-Shirt White', price: 10.99, isChecked: false, count: 0 },
         { id: 3, title: 'Charli XCX - Sucker CD', price: 19.99, isChecked: false, count: 0 }
       ]
